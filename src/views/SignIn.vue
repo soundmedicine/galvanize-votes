@@ -23,11 +23,28 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-  @import '~@/styles/_colors'
-  @import '~@/styles/_typography'
-  @import '~@/styles/_resets'
+  @import '~@/styles/_colors.scss';
+  @import '~@/styles/_typography.scss';
+  @import '~@/styles/_resets.scss';
   .sign-in {
-    
+    @include base-font;
+    header {
+      margin: 2rem 0;
+      text-align: center;
+      h1 {
+        @include primary-header-font;
+        text-align: center;
+      }
+      img {
+        max-width: 320px;
+        margin-bottom: 2rem;
+      }
+    }
+    main {
+      p {
+        text-align: center;
+      }
+    }
   }
 </style>
 
